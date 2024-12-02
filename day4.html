@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            height: 50vh;
+            width: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: orange;
+        }
+        .parent:hover{
+            justify-content: space-around;
+            /* transform: rotate(50deg); */
+            transform: translate(90px);
+            transition: 5;
+        }
+        .childone{
+            height: 20vh;
+            width: 200px;
+            
+            background-color: green;
+        }
+        .childone:hover{
+            background-color: red;
+        }
+        .childtwo{
+            height: 20vh;
+            width: 200px;
+
+            background-color: blue;
+        }
+        .childtwo:hover{
+            background-color: red;
+        }
+        nav{
+            display: flex;
+            background-image:url("https://static.  .com/system/resources/thumbnails/029/140/264/small_2x/background-the-himalayan-heights-ai-generated-photo.jpg");
+            background-size: cover;
+            justify-content: space-between;
+            background-position: center;
+        }
+        nav ul{
+            width: 500px;
+            display: flex;
+            font-size: large;
+            color: red;
+            list-style-type: none;
+            justify-content: space-around;
+        }
+        nav ul li:hover{
+           background-color: black;
+           border-radius: 3px ;
+        }
+        .selection{
+            height: 90vh;
+            width: 100%;
+            background-image: url(" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCZlf5lc5tX-0gY-y94pGS0mQdL-D0lCH2OQ&s");
+            background-size: cover;
+            background-position: center;
+            background-repeat:no-repeat;
+        }
+        .o{
+            height: 90vh;
+            width: 100%;
+            background-color: aliceblue;
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div><img src="image/beach.jpg" alt="" height="65px" width="60px"></div>
+        <ul>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <div class="parent">
+        <div class="childone"></div>
+        <div class="childtwo"></div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="selection"><div class="o">
+        <h1>Hello</h1>
+    </div></div>
+</body>
+</html>
