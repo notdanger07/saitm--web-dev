@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello <span class="username">kuch</span></h1>
+    <button onclick="changename()">changename</button>
+    <div class="div" style="height: 500px;width: 500px; background-color: yellowgreen;"></div>
+    <button onclick="changecolor()">chanegcolor</button>
+    <script>
+        const changename=()=>{
+          const name=window.prompt("Enter your name");
+          const Nameplace=document.getElementsByClassName("username")[0].innerHTML=name;
+        }
+        const changecolor=()=>{
+            const changeback=document.getElementsByClassName("div")[0].style.background="red"
+        }
+    </script>
+</body>
+</html>

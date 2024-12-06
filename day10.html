@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <label for="">Username</label>
+            <input type="text" placeholder="username" id="username"><BR></BR>
+            <label for="">Email</label>
+            <input type="text" placeholder="email" id="email" required><BR></BR>
+            <label for="">password</label>
+            <input type="password" placeholder="email" id="pass"><br>
+            <label for="">confirm password</label>
+            <input type="password" placeholder="email" id="Cpass"><br>
+            <button onclick="submitForm()">submit</button>
+
+        </fieldset>
+    </form>
+    <script>
+    let email=document.getElementById("email").value;
+        const validemail=(email)=>{
+            if(email.include(".")&&email.include("@")){
+                console.log("true")
+                return true
+            }else {
+                console.log("false")
+                return false }
+        }
+        const submitForm=()=>{
+            let username = document.getElementById("username").value
+            let password = document.getElementById("pass").value
+            let Confirmpass= document.getElementById("Cpass").value
+            let email= document.getElementById("email").value
+            console.log("Checking the form")
+
+            if(!username || !password || !Confirmpass){
+                window.alert("Please enter all the input fields.")
+                return
+            }
+            if(!validemail(email)){
+                window.alert("Please enter a valid email address.")
+                return
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        
+// array
+
+let ar=["prince",2,0,0,6,"kumar"];
+let arr = new Array(100);
+console.log(arr);
+console.log(ar);
+ar.push("john");
+console.log(ar);
+ar.pop();
+console.log(ar)
+ar.shift()
+console.log(arr)
+ar.unshift("kuch")
+console.log(ar)
+let reverse=ar.reverse();
+console.log(reverse)
+
+// sorted
+
+let array=[2,7,4,6,5,1,54,67]
+console.log(array.sort((a,b)=>a-b))
+console.log(array.sort((a,b)=>b-a))
+let Fruitarray=["banana","apple","melon","orange","mango"]
+console.log(Fruitarray.sort());
+console.log(Fruitarray.sort().reverse());
+
+for(let i=0;i<=(Fruitarray.length);i++){
+    console.log(`I Like ${Fruitarray[i]} to eat`);
+}
+console.log(`I Like ${Fruitarray[2]} to eat`);
+
+
+console.log("Printing fruits using for in map");
+for(let x in Fruitarray){
+    console.log(Fruitarray[x])
+}
+
+console.log("Printing fruits using map");
+const newfruits=Fruitarray.map((item)=>{
+    console.log(item)
+})
+console.log("Printing fruits using for each");
+Fruitarray.forEach((item)=>{
+    console.log(item)
+})
+
+// conditional?
+
+const age=[23,43,52,23,53,6,0,5]
+console.log(age.filter((age)=>age>40))
+console.log("retire")
+console.log(Fruitarray.slice(2,4))
+console.log(Fruitarray.splice(2,3,"pineapple"))
+ 
+const obj={
+    Name:"Prince",
+    Age:18,
+    RollNumber:243012
+
+}
+console.log(obj.Name)
+const restuarant={
+    Name:"OG Restuarant",
+    stablised:1990,
+    owner:"kuch bhi",
+    Menu:{
+       nonveg:{
+        type:["CHicken","Fish","eggs"]
+       },
+       veg:{
+         type:["Paneer","mixveg","roti",...Fruitarray]
+       }
+    },
+    address:{
+        state:"haryana",
+        distisk:"faridabad",
+        pincode:1
+    }
+}
+console.log(restuarant.Menu.veg.type)
+
+//rest operator
+
+const addNumber=(...rest)=>{
+
+}
+    </script>
+
+    
+</body>
+</html>

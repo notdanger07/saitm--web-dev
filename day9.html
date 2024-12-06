@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="bulb"  style="height: 400px;width: 400px;background-color: aqua;"></div>
+    <button onclick="Checkbulb()">click me</button>
+
+    <h1  id="getid">Hello</h1>
+    <button onclick="idselector()">clickme</button>
+
+    <h1 class="getclass" >Hello</h1>
+    <button onclick="classselector()">clickme</button>
+
+    <h1 class="get" >Hello</h1>
+    <button onclick="qurryselector()">clickme</button>
+
+    <div class="eventlistener" style="height: 300px ; width: 300px; border-radius: 50%;
+    background-color: gray;" ></div>
+    <form action="">
+        <label for="username">username</label>
+        <input type="text" placeholder="username" id="username"><br>
+        <label for="username">password</label>
+        <input type="password" placeholder="pass"><br>
+        <label for="username">confirm-pass</label>
+        <input type="password" placeholder="password">
+        <button>submit</button>
+    </form>
+    
+   <input type="number" id="no1" placeholder="no.">
+   <input type="number" id="no2" placeholder="no.">
+    <script>
+        let status=false;
+        
+        const Checkbulb=()=>{
+              if(status==false){
+                let color=document.getElementsByClassName("bulb")[0].style.backgroundColor="yellow";
+                status=true
+              }else{
+                let color=document.getElementsByClassName("bulb")[0].style.backgroundColor="aqua";
+                status=false
+              }
+        }
+
+        //////////element selector
+        
+        idselector=()=>{
+
+        
+        const idselector=document.getElementById('getid');
+        console.log(idselector)
+         idselector.innerHTML="changed text"
+        }
+        classselector=()=>{
+
+        
+        const classselector=document.getElementsByClassName('getclass');
+        console.log(classselector)
+        classselector.innerHTML="changed text"
+        }
+        qurryselector=()=>{
+
+        
+        const qurryselector=document.getElementById('.get');
+        console.log(qurryselector)
+        qurryselector.innerHTML="changed text"
+        }
+
+        ////////event listn=ener
+
+        const sunlight=()=>{
+            let status=false
+            let sun=document.getElementsByClassName("eventlistener")[0]
+if(status==false){
+             sun.addEventListener("click",()=>{
+                
+                    sun.style.backgroundColor="yellow";
+                    sun.style.boxShadow="10px 10px 100px 10px";
+                 status=true
+            })}
+            else{
+                console.log("click")
+                sun.addEventListener("click",()=>{
+                
+                sun.style.backgroundColor="gray";
+                sun.style.boxShadow="10px 10px 100px 10px";})
+                status=false
+            }
+        }
+        sunlight()
+       
+
+        let username=document.getElementById("username").value
+        let pass=document.getElementById("username").value
+        let confirmpass=document.getElementById("username").value
+      if(username==""||password==""||confirmpass==""){
+        window.alert("enter details")
+        return
+        
+      }
+      if(pass<8){
+        window.alert("please enter a strong pass")
+        return
+      }
+      if(confirmpass==pass){
+        window.alert("password doesnt match")
+        return
+
+      }
+
+      let a=document.getElementById("no1").value
+      let b=document.getElementById("no2").value
+      const sum=(a,b)=>{
+        return a+b
+      }
+      
+    </script>
+</body>
+</html>
